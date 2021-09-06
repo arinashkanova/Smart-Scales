@@ -24,7 +24,7 @@ def get_cost(names):
         
         if tesser_predict(PATH):
             weight = int(tesser_predict(PATH))/ 1000
-            price = {key: round(Counter(low_class)[key]*INFO[key.lower()][0]*weight, 2) for key in Counter(low_class).keys()}
+            price = {key: round(INFO[key.lower()][0]*weight, 2) for key in Counter(low_class).keys()}
             label = list(price.keys())[0]
         else:
             price = {key: round(Counter(low_class)[key]*INFO[key.lower()][0]*INFO[key.lower()][1], 2) for key in Counter(low_class).keys()}
