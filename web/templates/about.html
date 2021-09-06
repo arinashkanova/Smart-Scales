@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+Contacts
+{% endblock %}
+
+{% block body %}
+<div class="row">
+    <div class="col-lg-4">
+        <img src={{ url_for('static', filename='Vova.jpg') }}>
+        <h2>Владимир Тугутов</h2>
+        <p>Telegram: @vladimir_tugutov</p>
+        <p>Github: <a href="https://github.com/vladimirtugutov"class="text-white"> @vladimirtugutov</a></p>
+    </div><!-- /.col-lg-4 -->
+    <div class="col-lg-4">
+        <img src={{ url_for('static', filename='arina.jpg') }}>
+        <h2>Арина Шканова</h2>
+        <p>Telegram: @arinasuper</p>
+        <p>Github: <a href="https://github.com/arinashkanova"class="text-white"> @arinashkanova</a></p>
+    </div><!-- /.col-lg-4 -->
+    <div class="col-lg-4">
+        <img src={{ url_for('static', filename='nikita.jpg') }}>
+        <h2>Никита Ларин</h2>
+        <p>Telegram: @Nik1_L</p>
+        <p>Github: <a href="https://github.com/Nik1-L"class="text-white"> @Nik1-L</a></p>
+    </div><!-- /.col-lg-4 -->
+  </div>
+{% endblock %}
