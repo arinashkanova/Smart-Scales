@@ -27,7 +27,7 @@ def tesser_predict(PATH)-> str:
   warped = four_point_transform(gray, displayCnt.reshape(4, 2))
   custom_config = r'--oem 3 --psm 6 outputbase digits'
   point = pytesseract.image_to_string(warped, config=custom_config)
-  dg = ''.join([i for i in point if i.isdigit()])
+  dg = ''.join([i for i in point if i.isdigit()]) #так как pytesseract считывает всё, а нам нужны только цифры
   return dg
 
 
